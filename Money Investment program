@@ -1,0 +1,20 @@
+/*Write a program that calculates how much money you’ll end up with if you invest anamount of money at a fixed interest rate, compounded yearly. Have the user furnish theinitial amount, the number of years, and the yearly interest rate in percent. Some interac-tion with the program might look like this:Enter initial amount: 3000Enter number of years: 10Enter interest rate (percent per year): 5.5At the end of 10 years, you will have 5124.43 dollars.Loops and Decisions3LOOPS ANDDECISIONS12704 3087 CH03  11/29/01  2:18 PM  Page 127
+At the end of the first year you have 3000 + (3000 * 0.055), which is 3165. At the end ofthe second year you have 3165 + (3165 * 0.055), which is 3339.08. Do this as manytimes as there are years. A forloop makes the calculation easy.
+*/
+#include<iostream>
+using namespace std;
+int main(){
+	int initial_amt, num_years;
+	const float rate =0.055;
+	double money;
+	cout<<"Enter Initial Amout :"<<endl;
+	cin>>initial_amt;
+	cout<<"Enter Number of Years :"<<endl;
+	cin>>num_years;
+	money = initial_amt + (initial_amt * rate);
+	for (int i; i<num_years; i++){
+	money =	money + (money * rate)
+	;}
+	cout<<"At the end of "<<num_years<<"years, you will have "<<money<<endl;
+	return 0;
+}
